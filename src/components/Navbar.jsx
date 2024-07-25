@@ -1,15 +1,12 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-scroll";
-import {
-  AiOutlineLinkedin,
-  AiOutlineGithub,
-  AiOutlineMail,
-} from "react-icons/ai";
+import { AiOutlineLinkedin, AiOutlineGithub, AiOutlineMail } from "react-icons/ai";
 import PortfolioLogo from "../assets/luca-white-logo.png";
 import PortfolioLogoLight from "../assets/luca-dark-logo.png";
 import { ThemeContext } from "./themeContext";
 import { ID_RESUME } from "../data/resume";
 import { useTranslation } from "react-i18next";
+import Toggle from "./Toggle"; // Asegúrate de importar el Toggle correctamente
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
@@ -59,6 +56,9 @@ const Navbar = () => {
             {isEnglish ? "EN" : "ES"}
           </span>
         </label>
+
+        {/* Botón de cambio de tema (Toggle) */}
+        <Toggle />
       </div>
 
       <ul className="hidden lg:flex mx-2">
@@ -122,6 +122,11 @@ const Navbar = () => {
             <span className="absolute -bottom-1 right-1/2 w-0 h-1 bg-light_hover dark:bg-hover transition-all duration-700 group-hover:w-1/2 group-hover:transition-all group-hover:duration-700"></span>
           </p>
         </li>
+        <li className="mx-4 px-4 items-center">
+          <a href={`https://drive.google.com/uc?export=download&id=${ID_RESUME}`} download>
+            <span className="relative">{t("about.resume")}↓</span>
+          </a>
+        </li>
       </ul>
 
       <div onClick={handleClick} className="lg:hidden z-10 text-4xl">
@@ -159,7 +164,6 @@ const Navbar = () => {
           menu ? "translate-x-0" : "translate-x-full"
         }`}
       >
-      
         <li className="py-6 text-4xl">
           <Link
             onClick={handleClick}
@@ -209,10 +213,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="py-6 text-4xl">
-          <a
-            href={`https://drive.google.com/uc?export=download&id=${ID_RESUME}`}
-            download
-          >
+          <a href={`https://drive.google.com/uc?export=download&id=${ID_RESUME}`} download>
             {t("navbar.resume")} ↓
           </a>
         </li>
