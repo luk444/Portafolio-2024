@@ -19,9 +19,16 @@ import SOCKETS from "../assets/sockets.png"
 import BOOTSTRAP from "../assets/bootstrap.png"
 import { ThemeContext } from "./themeContext";
 import Skill from "./Skill";
+import { useTranslation } from "react-i18next";
 
 export default function Technologies() {
   const { theme } = useContext(ThemeContext);
+  
+  const [t, i18n] = useTranslation("global")
+
+  const hadleChangeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
 
   const skills = [
     { title: "HTML", src: HTML, alt: "HTML Icon" },
@@ -51,7 +58,7 @@ export default function Technologies() {
     <>
       <div className="col-span-2 lg:col-span-3 pt-10">
         <p className="text-md lg:text-xl px-2 py-1 font-bold inline border-l-4 border-b-4 border-light_structure dark:border-structure text-light_title dark:text-title transition-all duration-700">
-          Technologies I've worked with:
+          {t("technologies.subtitle")}
         </p>
       </div>
       <div className="col-span-2 lg:col-span-3">

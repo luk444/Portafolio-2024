@@ -1,0 +1,57 @@
+{
+  "about": {
+    "body": "01.About",
+    "contactme": "Contact me!",
+    "resume": "Resume",
+    "descrip": "Hello! I'm Luca :) FrontEnd Developer, enthusiastic, with the ability to contribute new and innovative ideas. I have skills to develop modular programming projects. I also consider having the versatility necessary to work in a team and I am always willing to listen and learn from other people's points of view. I really want to grow professionally and achieve all my goals.",
+    "descrip2": "Worked as a developer for about 3 years, mainly focusing on Frontend development, although I also have experience and perform well on the Backend with some technologies. My experience includes roles as a Full Stack developer, which has allowed me to improve both my technical skills and my interpersonal skills. I learned to be responsible and communicate effectively with clients, since all my jobs have been freelance. These experiences have taught me a lot about web and application development, REST services, API development, client-server architecture, protocols, among other important aspects."
+  },
+
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "mywork": "My Work",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+
+  "hero": {
+    "hi": "Hi, I'm",
+    "front": "FrontEnd Developer",
+    "view": "View Work",
+    "specs": "As a developer, I like to bring new and innovative ideas to the team, always striving to improve my skills. I do well with back-end development, however I thrive with front-end development since it gives me the chance to explore my creativity."
+  },
+
+  "technologies": {
+    "subtitle": "Technologies I've worked with:"
+  },
+
+  
+  "work": {
+      "subtitle": "02.Work:"
+  },
+
+  "proyect": {
+      "date": "Date",
+      "role": "Role",
+      "technology": "Technologies",
+      "visit": "Visit",
+      "repo": "Repository"
+  },
+
+  "contact": {
+    "contac": "03.Contact",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "lets": "Let's collaborate"
+
+  },
+
+  "certificados": {
+    "subtitle": "My certificates:"
+  }
+
+
+}

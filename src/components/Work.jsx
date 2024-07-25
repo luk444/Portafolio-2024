@@ -1,8 +1,16 @@
 import React from "react";
 import Proyect from "./Proyect";
 import proyects from "../data/proyects";
+import { useTranslation } from "react-i18next";
 
 function Work() {
+
+  const [t, i18n] = useTranslation("global")
+
+  const hadleChangeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+
   return (
     <div
       name="work"
@@ -12,7 +20,7 @@ function Work() {
         <div className="max-w-6xl w-full px-6">
           <div className="pb-10">
             <p className="text-4xl px-2 py-1 font-bold inline border-l-4 border-b-4 border-light_structure dark:border-structure text-light_title dark:text-title transition-all duration-700">
-              02.Work
+              {t("work.subtitle")}
             </p>
           </div>
         </div>

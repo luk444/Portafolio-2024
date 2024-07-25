@@ -10,11 +10,18 @@ import PortfolioLogoLight from "../assets/luca-dark-logo.png";
 import { ThemeContext } from "./themeContext";
 import Toggle from "./Toggle";
 import { ID_RESUME } from "../data/resume";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
   const handleClick = () => {
     setMenu(!menu);
+  };
+
+  const [t, i18n] = useTranslation("global")
+
+  const hadleChangeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
   };
 
   const { theme } = useContext(ThemeContext);
@@ -35,6 +42,8 @@ const Navbar = () => {
             className="h-[180px] mt-3 cursor-pointer transition-all duration-700"
           />
         </Link>
+        <button onClick={() => hadleChangeLanguage("en")}> EN</button>
+        <button onClick={() => hadleChangeLanguage("es")}> ES</button>
       </div>
 
       <ul className="hidden lg:flex mx-2">
@@ -47,7 +56,7 @@ const Navbar = () => {
               smooth={true}
               duration={1500}
             >
-              Home
+              {t("navbar.home")}
             </Link>
             <span className="absolute -bottom-1 left-1/2 w-0 h-1 bg-light_hover dark:bg-hover transition-all duration-700 group-hover:w-1/2 group-hover:transition-all group-hover:duration-700"></span>
             <span className="absolute -bottom-1 right-1/2 w-0 h-1 bg-light_hover dark:bg-hover transition-all duration-700 group-hover:w-1/2 group-hover:transition-all group-hover:duration-700"></span>
@@ -62,7 +71,7 @@ const Navbar = () => {
               smooth={true}
               duration={1500}
             >
-              About
+              {t("navbar.about")}
             </Link>
             <span className="absolute -bottom-1 left-1/2 w-0 h-1 bg-light_hover dark:bg-hover transition-all duration-700 group-hover:w-1/2 group-hover:transition-all group-hover:duration-700"></span>
             <span className="absolute -bottom-1 right-1/2 w-0 h-1 bg-light_hover dark:bg-hover transition-all duration-700 group-hover:w-1/2 group-hover:transition-all group-hover:duration-700"></span>
@@ -77,7 +86,7 @@ const Navbar = () => {
               smooth={true}
               duration={1500}
             >
-              My Work
+              {t("navbar.mywork")}
             </Link>
             <span className="absolute -bottom-1 left-1/2 w-0 h-1 bg-light_hover dark:bg-hover transition-all duration-700 group-hover:w-1/2 group-hover:transition-all group-hover:duration-700"></span>
             <span className="absolute -bottom-1 right-1/2 w-0 h-1 bg-light_hover dark:bg-hover transition-all duration-700 group-hover:w-1/2 group-hover:transition-all group-hover:duration-700"></span>
@@ -108,7 +117,7 @@ const Navbar = () => {
               smooth={true}
               duration={1500}
             >
-              Contact
+              {t("navbar.contact")}
             </Link>
             <span className="absolute -bottom-1 left-1/2 w-0 h-1 bg-light_hover dark:bg-hover transition-all duration-700 group-hover:w-1/2 group-hover:transition-all group-hover:duration-700"></span>
             <span className="absolute -bottom-1 right-1/2 w-0 h-1 bg-light_hover dark:bg-hover transition-all duration-700 group-hover:w-1/2 group-hover:transition-all group-hover:duration-700"></span>
@@ -120,7 +129,7 @@ const Navbar = () => {
               href={`https://drive.google.com/uc?export=download&id=${ID_RESUME}`}
               download
             >
-              Resume ↓
+              {t("navbar.resume")} ↓
             </a>
             <span className="absolute -bottom-1 left-1/2 w-0 h-1 bg-light_hover dark:bg-hover transition-all duration-700 group-hover:w-1/2 group-hover:transition-all group-hover:duration-700"></span>
             <span className="absolute -bottom-1 right-1/2 w-0 h-1 bg-light_hover dark:bg-hover transition-all duration-700 group-hover:w-1/2 group-hover:transition-all group-hover:duration-700"></span>
@@ -178,7 +187,7 @@ const Navbar = () => {
             smooth={true}
             duration={1500}
           >
-            Home
+            {t("navbar.home")}
           </Link>
         </li>
         <li className="py-6 text-4xl">
@@ -190,7 +199,7 @@ const Navbar = () => {
             smooth={true}
             duration={1500}
           >
-            About
+            {t("navbar.about")}
           </Link>
         </li>
         <li className="py-6 text-4xl">
@@ -202,7 +211,7 @@ const Navbar = () => {
             smooth={true}
             duration={1500}
           >
-            My Work
+            {t("navbar.mywork")}
           </Link>
         </li>
         {/* <li onClick={handleClick} className="py-8 text-4xl">
@@ -217,7 +226,7 @@ const Navbar = () => {
             smooth={true}
             duration={1500}
           >
-            Contact
+            {t("navbar.contact")}
           </Link>
         </li>
         <li className="py-6 text-4xl">
@@ -225,7 +234,7 @@ const Navbar = () => {
             href={`https://drive.google.com/uc?export=download&id=${ID_RESUME}`}
             download
           >
-            Resume ↓
+            {t("navbar.resume")} ↓
           </a>
         </li>
         <li className="py-6 text-5xl flex flex-row">

@@ -1,4 +1,6 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+
 
 export default function Proyect({
   title,
@@ -10,6 +12,11 @@ export default function Proyect({
   repo,
   rol = "Front end Developer",
 }) {
+  const [t, i18n] = useTranslation("global")
+
+  const hadleChangeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
   return (
     <>
       <div className="flex flex-col h-full my-6 lg:flex-row">
@@ -23,7 +30,7 @@ export default function Proyect({
           <h1 className="text-3xl font-bold mb-4 mt-0 mx-6 uppercase pt-4">
             {title}
             <p className="text-light_title dark:text-title text-xs border-b-4 border-light_structure dark:border-structure transition-all duration-700">
-              Date: {date} / Role: {rol}
+              {t("proyect.date")}: {date} / {t("proyect.role")}: {rol}
             </p>
           </h1>
           <div className="mx-6 text-base transition-all font-semibold">
@@ -31,7 +38,7 @@ export default function Proyect({
           </div>
           <div className="mx-6 text-sm">
             <p className="text-light_title dark:text-title text-xs font-bold mt-4 mb-1 uppercase transition-all duration-700">
-              Technologies:
+              {t("proyect.technology")}:
             </p>
             <div className="flex flex-row flex-wrap font-semibold py-1 border-b-4 border-t-4 border-light_structure dark:border-structure">
               {tecnologies.map((tec) => (
@@ -49,7 +56,7 @@ export default function Proyect({
               >
                 <span className="absolute inset-0 w-full h-full transition-all duration-700 transform -translate-x-1 -translate-y-1 bg-light_hover dark:bg-hover ease dark:opacity-80 lg:group-hover:translate-x-0 lg:group-hover:translate-y-0"></span>
                 <span className="absolute inset-0 w-full h-full transition-all duration-700 transform translate-x-1 translate-y-1 bg-light_hover dark:bg-hover ease opacity-50 dark:opacity-80 lg:group-hover:translate-x-0 lg:group-hover:translate-y-0 mix-blend-multiply dark:mix-blend-screen"></span>
-                <span className="relative">Visit</span>
+                <span className="relative">{t("proyect.visit")}</span>
               </a>
             </div>
             <div className="my-8">
@@ -61,7 +68,7 @@ export default function Proyect({
               >
                 <span className="absolute inset-0 w-full h-full transition-all duration-700 transform -translate-x-1 -translate-y-1 bg-light_subtitle dark:bg-subtitle ease dark:opacity-80 lg:group-hover:translate-x-0 lg:group-hover:translate-y-0"></span>
                 <span className="absolute inset-0 w-full h-full transition-all duration-700 transform translate-x-1 translate-y-1 bg-light_subtitle dark:bg-subtitle ease opacity-50 dark:opacity-80 lg:group-hover:translate-x-0 lg:group-hover:translate-y-0 mix-blend-multiply dark:mix-blend-screen"></span>
-                <span className="relative">Repository</span>
+                <span className="relative">{t("proyect.repo")}</span>
               </a>
             </div>
           </div>

@@ -3,7 +3,16 @@ import { Link } from "react-scroll";
 import ProfilePic from "../assets/profile.png";
 import Technologies from "./Technologies";
 import { ID_RESUME } from "../data/resume";
+import { useTranslation } from "react-i18next";
+import Certificados from "./Certificados";
+
 const About = () => {
+  const [t, i18n] = useTranslation("global")
+
+  const hadleChangeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+  
   return (
     <div
       name="about"
@@ -13,7 +22,7 @@ const About = () => {
         <div className="max-w-6xl w-full px-6">
           <div className="pb-10">
             <p className="text-4xl px-2 py-1 font-bold inline border-l-4 border-b-4 border-light_structure dark:border-structure text-light_title dark:text-title transition-all duration-700">
-              01.About
+              {t("about.body")}
             </p>
           </div>
         </div>
@@ -41,7 +50,7 @@ const About = () => {
               >
                 <span className="absolute inset-0 w-full h-full transition-all duration-700 transform -translate-x-1 -translate-y-1 bg-light_subtitle dark:bg-subtitle ease dark:opacity-80 lg:group-hover:translate-x-0 lg:group-hover:translate-y-0"></span>
                 <span className="absolute inset-0 w-full h-full transition-all duration-700 transform translate-x-1 translate-y-1 bg-light_subtitle dark:bg-subtitle ease opacity-50 dark:opacity-80 lg:group-hover:translate-x-0 lg:group-hover:translate-y-0 mix-blend-multiply dark:mix-blend-screen"></span>
-                <span className="relative">Contact me!</span>
+                <span className="relative">{t("about.contactme")}</span>
               </Link>
             </div>
             <div className="my-8">
@@ -52,24 +61,25 @@ const About = () => {
               >
                 <span className="absolute inset-0 w-full h-full transition-all duration-700 transform -translate-x-1 -translate-y-1 bg-light_hover dark:bg-hover ease dark:opacity-80 lg:group-hover:translate-x-0 lg:group-hover:translate-y-0"></span>
                 <span className="absolute inset-0 w-full h-full transition-all duration-700 transform translate-x-1 translate-y-1 bg-light_hover dark:bg-hover ease opacity-50 dark:opacity-80 lg:group-hover:translate-x-0 lg:group-hover:translate-y-0 mix-blend-multiply dark:mix-blend-screen"></span>
-                <span className="relative">Resume ↓</span>
+                <span className="relative">{t("about.resume")}↓</span>
               </a>
             </div>
           </div>
 
           <div className="text-justify col-span-2 py-4 font-semibold lg:row-start-1 lg:col-start-2">
             <p>
-            Hello! I'm Luca :) FrontEnd Developer, enthusiastic, with the ability to contribute new and innovative ideas. I have skills to develop modular programming projects. I also consider having the versatility necessary to work in a team and I am always willing to listen and learn from other people's points of view. I really want to grow professionally and achieve all my goals.
+            {t("about.descrip")}
             </p>
           </div>
 
           <div className="text-justify col-span-2 py-4 font-semibold lg:row-start-2 lg:col-start-2">
             <p>
-            Worked as a developer for about 3 years, mainly focusing on Frontend development, although I also have experience and perform well on the Backend with some technologies. My experience includes roles as a Full Stack developer, which has allowed me to improve both my technical skills and my interpersonal skills. I learned to be responsible and communicate effectively with clients, since all my jobs have been freelance. These experiences have taught me a lot about web and application development, REST services, API development, client-server architecture, protocols, among other important aspects.
+            {t("about.descrip2")}
             </p>
           </div>
 
           <Technologies />
+          <Certificados />
         </div>
       </div>
     </div>
