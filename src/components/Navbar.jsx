@@ -8,20 +8,22 @@ import {
 import PortfolioLogo from "../assets/luca-white-logo.png";
 import PortfolioLogoLight from "../assets/luca-dark-logo.png";
 import { ThemeContext } from "./themeContext";
-import Toggle from "./Toggle";
 import { ID_RESUME } from "../data/resume";
 import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
+  const [isEnglish, setIsEnglish] = useState(true); // Estado para el idioma
+
   const handleClick = () => {
     setMenu(!menu);
   };
 
-  const [t, i18n] = useTranslation("global")
+  const [t, i18n] = useTranslation("global");
 
-  const hadleChangeLanguage = (lang: string) => {
+  const handleChangeLanguage = (lang) => {
     i18n.changeLanguage(lang);
+    setIsEnglish(lang === 'en');
   };
 
   const { theme } = useContext(ThemeContext);
@@ -42,8 +44,21 @@ const Navbar = () => {
             className="h-[180px] mt-3 cursor-pointer transition-all duration-700"
           />
         </Link>
-        <button onClick={() => hadleChangeLanguage("en")}> EN</button>
-        <button onClick={() => hadleChangeLanguage("es")}> ES</button>
+      </div>
+
+      <div className="flex items-center">
+        <label className="inline-flex items-center cursor-pointer me-4">
+          <input
+            type="checkbox"
+            checked={isEnglish}
+            onChange={() => handleChangeLanguage(isEnglish ? "es" : "en")}
+            className="sr-only peer"
+          />
+          <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+          <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+            {isEnglish ? "EN" : "ES"}
+          </span>
+        </label>
       </div>
 
       <ul className="hidden lg:flex mx-2">
@@ -92,22 +107,6 @@ const Navbar = () => {
             <span className="absolute -bottom-1 right-1/2 w-0 h-1 bg-light_hover dark:bg-hover transition-all duration-700 group-hover:w-1/2 group-hover:transition-all group-hover:duration-700"></span>
           </p>
         </li>
-        {/* <li className="mx-4 px-4 items-center">
-          <p className="relative group">
-            <Link
-              activeClass="active"
-              to="skills"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={1500}
-            >
-              Skills
-            </Link>
-            <span className="absolute -bottom-1 left-1/2 w-0 h-1 bg-hover duration-700 group-hover:w-1/2 group-hover:transition-all group-hover:duration-700"></span>
-            <span className="absolute -bottom-1 right-1/2 w-0 h-1 bg-hover duration-700 group-hover:w-1/2 group-hover:transition-all group-hover:duration-700"></span>
-          </p>
-        </li> */}
         <li className="mx-4 px-4 items-center">
           <p className="relative group">
             <Link
@@ -122,21 +121,6 @@ const Navbar = () => {
             <span className="absolute -bottom-1 left-1/2 w-0 h-1 bg-light_hover dark:bg-hover transition-all duration-700 group-hover:w-1/2 group-hover:transition-all group-hover:duration-700"></span>
             <span className="absolute -bottom-1 right-1/2 w-0 h-1 bg-light_hover dark:bg-hover transition-all duration-700 group-hover:w-1/2 group-hover:transition-all group-hover:duration-700"></span>
           </p>
-        </li>
-        <li className="mx-4 px-4 items-center">
-          <p className="relative group">
-            <a
-              href={`https://drive.google.com/uc?export=download&id=${ID_RESUME}`}
-              download
-            >
-              {t("navbar.resume")} ↓
-            </a>
-            <span className="absolute -bottom-1 left-1/2 w-0 h-1 bg-light_hover dark:bg-hover transition-all duration-700 group-hover:w-1/2 group-hover:transition-all group-hover:duration-700"></span>
-            <span className="absolute -bottom-1 right-1/2 w-0 h-1 bg-light_hover dark:bg-hover transition-all duration-700 group-hover:w-1/2 group-hover:transition-all group-hover:duration-700"></span>
-          </p>
-        </li>
-        <li className="mx-2 px-2 items-center">
-          <Toggle />
         </li>
       </ul>
 
@@ -176,7 +160,7 @@ const Navbar = () => {
         }`}
       >
         <li className="py-6 text-4xl" onClick={handleClick}>
-          <Toggle />
+          <span className="text-light_text dark:text-text">Toggle</span> {/* Placeholder for Toggle */}
         </li>
         <li className="py-6 text-4xl">
           <Link
@@ -214,9 +198,6 @@ const Navbar = () => {
             {t("navbar.mywork")}
           </Link>
         </li>
-        {/* <li onClick={handleClick} className="py-8 text-4xl">
-          Skills
-        </li> */}
         <li className="py-6 text-4xl">
           <Link
             onClick={handleClick}
@@ -235,20 +216,6 @@ const Navbar = () => {
             download
           >
             {t("navbar.resume")} ↓
-          </a>
-        </li>
-        <li className="py-6 text-5xl flex flex-row">
-          <a
-            href="https://www.linkedin.com/in/luk444"
-            className="px-6"
-          >
-            <AiOutlineLinkedin />
-          </a>
-          <a href="https://github.com/luk444" className="px-6">
-            <AiOutlineGithub />
-          </a>
-          <a href="mailto:lucaventura54@gmail.com" className="px-6">
-            <AiOutlineMail />
           </a>
         </li>
       </ul>
@@ -285,7 +252,7 @@ const Navbar = () => {
             <span className="absolute left-0 w-0 h-16 bg-[#e51a26] transition-all duration-700 group-hover:w-full group-hover:transition-all group-hover:duration-700"></span>
             <a
               className="absolute flex items-center w-full duration-700 group-hover:duration-700 group-hover:w-3/4 text-white"
-              href="mailto:lucaventura54@gmail.com"
+              href={`mailto:lucaventura54@gmail.com`}
             >
               Mail
               <AiOutlineMail className="absolute left-[105px] text-4xl text-light_title dark:text-title group-hover:text-white transition-all duration-700 group-hover:duration-700" />
