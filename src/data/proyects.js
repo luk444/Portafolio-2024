@@ -4,6 +4,8 @@ import TradeCripto from "../assets/TradeCripto.png";
 import translator from "../assets/translator.png";
 import furniture from "../assets/Forniture-Ecomerce.png";
 import Classyclub from "../assets/ClassyClub.png";
+import Autopart from "../assets/Ecomerce-Automanicaos.png";
+
 
 const proyects = [
   {
@@ -14,19 +16,19 @@ const proyects = [
     tecnologies: ["Javascript", "React JS", "Redux", "Tailwind", "Node JS", "Express", "Firebase", "FirebaseAuth"],
     deploy: "https://automaniacos.netlify.app/",
     repo: "https://github.com/luk444/Ecomerce-AutoManiacos",
-    img: baxinova,
+    img: Autopart,
     rol:"Full Stack Developer"
   },
   {
     title: "Development.of Furniture Ecommerce",
-    date: "Sep 2022",
+    date: "Dec 2023",
     description:
-      "I developed a furniture ecommerce using ReactJS as a final project. I was responsible for both front-end and back-end, ensuring a smooth user experience and robust functionalities such as inventory management and order processing. This project represented my ability to apply ReactJS in creating interactive and efficient interfaces, demonstrating proficiency in complete web application development from planning to implementation.",
+      "I have worked on the Frontend development of web pages for heating contractor companies. My main role has been to create interfaces that allow the company to publish its services on Google and facilitate the coordination of visits with clients through phone calls after they view the relevant information on the website. This job has allowed me to apply my web design and user experience skills to ensure navigation is intuitive and key information about heating services is clearly accessible to site visitors.",
     tecnologies: ["React", "JavaScript", "Node JS", "Firebase" , "Css"],
-    deploy: "https://bejewelled-begonia-49bed3.netlify.app/",
-    repo: "https://github.com/luk444/ReactJs-final",
-    img: furniture,
-    rol: "Full Stack Developer"
+    deploy: "https://baxinova.netlify.app/#",
+    repo: "https://github.com/luk444/Web-Empresa-Calderas",
+    img: baxinova,
+    rol: "FrontEnd"
   },
   {
     title: "LadingPage: Beauty salon",
@@ -48,6 +50,17 @@ const proyects = [
     repo: "hhttps://github.com/luk444/TradeCripto",
     img: TradeCripto,
     rol:"Full Stack Developer"
+  },
+  {
+    title: "Development.of Furniture Ecommerce",
+    date: "Sep 2022",
+    description:
+      "I developed a furniture ecommerce using ReactJS as a final project. I was responsible for both front-end and back-end, ensuring a smooth user experience and robust functionalities such as inventory management and order processing. This project represented my ability to apply ReactJS in creating interactive and efficient interfaces, demonstrating proficiency in complete web application development from planning to implementation.",
+    tecnologies: ["React", "JavaScript", "Node JS", "Firebase" , "Css"],
+    deploy: "https://bejewelled-begonia-49bed3.netlify.app/",
+    repo: "https://github.com/luk444/ReactJs-final",
+    img: furniture,
+    rol: "Full Stack Developer"
   },
   {
     title: "Lucc Translator [not working because of expired api key]",

@@ -23,4 +23,4 @@
 - The web app must be shown in your browser at localhost:3000
 
 ### Deploy
-[Click Here](https://portfolio-lucav.netlify.app/)
+[Click Here](https://portfolio-lucav.vercel.app/)
