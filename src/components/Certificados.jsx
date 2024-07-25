@@ -30,8 +30,8 @@ export default function Certificados() {
   const skills = [
     { title: 'JavaScript', src: JAVASCRIPT, cert: JAVASCRIPT_CERT, alt: 'JavaScript Icon' },
     { title: 'React', src: REACT, cert: REACT_CERT, alt: 'React Icon' },
-    { title: 'CoderHouse', src: CODER, cert: CODER_CERT, alt: 'CoderHouse Icon' },
-    { title: 'Ticmas', src: TICMAS, cert: TICMAS_CERT, alt: 'Ticmas Icon' },
+    { title: 'DesarrolloWeb', src: CODER, cert: CODER_CERT, alt: 'CoderHouse Icon' },
+    { title: 'FrontEnd', src: TICMAS, cert: TICMAS_CERT, alt: 'Ticmas Icon' },
   ];
 
   return (
