@@ -159,9 +159,7 @@ const Navbar = () => {
           menu ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <li className="py-6 text-4xl" onClick={handleClick}>
-          <span className="text-light_text dark:text-text">Toggle</span> {/* Placeholder for Toggle */}
-        </li>
+      
         <li className="py-6 text-4xl">
           <Link
             onClick={handleClick}
