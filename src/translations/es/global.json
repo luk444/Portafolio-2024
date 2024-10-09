@@ -3,7 +3,7 @@
       "body": "01.Acerca de",
       "contactme": "Contactame!",
       "resume": "CV",
-      "descrip": "Hola! Soy Luca :) Desarrollador FrontEnd, entusiasta, con capacidad de aportar ideas nuevas e innovadoras. Tengo habilidades para desarrollar proyectos de programación modular. Considero también tener la versatilidad necesaria para trabajar en equipo y siempre estoy dispuesto a escuchar y aprender de los puntos de vista de otras personas. Tengo muchas ganas de crecer profesionalmente y lograr todos mis objetivos.",
+      "descrip": "Hola! Soy Luca :) Desarrollador FullStack, entusiasta, con capacidad de aportar ideas nuevas e innovadoras. Tengo habilidades para desarrollar proyectos de programación modular. Considero también tener la versatilidad necesaria para trabajar en equipo y siempre estoy dispuesto a escuchar y aprender de los puntos de vista de otras personas. Tengo muchas ganas de crecer profesionalmente y lograr todos mis objetivos.",
       "descrip2": "He trabajado como desarrollador durante aproximadamente 3 años, enfocándome principalmente en el desarrollo Frontend, aunque también tengo experiencia y me desenvuelvo bien en el Backend con algunas tecnologías. Mi experiencia incluye roles como desarrollador Full Stack, lo que me ha permitido mejorar tanto mis habilidades técnicas como mis habilidades interpersonales. Aprendí a ser responsable y a comunicarme efectivamente con los clientes, ya que todos mis trabajos han sido freelance. Estas experiencias me han enseñado mucho sobre desarrollo web y de aplicaciones, servicios REST, desarrollo de API, arquitectura cliente-servidor, protocolos, entre otros aspectos importantes."
       
     },
@@ -18,7 +18,7 @@
 
     "hero": {
       "hi": "Hola, yo soy",
-      "front": "Desarollador FrontEnd",
+      "front": "Desarollador FullStack",
       "view": "Ver Trabajo",
       "specs": "Como desarrollador, me gusta aportar ideas nuevas e innovadoras al equipo y siempre me esfuerzo por mejorar mis habilidades. Me va bien con el desarrollo back-end, pero me va mejor con el desarrollo front-end, ya que me da la oportunidad de explorar mi creatividad."
     },

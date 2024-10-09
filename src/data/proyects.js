@@ -20,8 +20,8 @@ const proyects = [
     rol:"Full Stack Developer"
   },
   {
-    title: "Development.of Furniture Ecommerce",
-    date: "Dec 2023",
+    title: "Website development for heating company",
+    date: "Dec 2022",
     description:
       "I have worked on the Frontend development of web pages for heating contractor companies. My main role has been to create interfaces that allow the company to publish its services on Google and facilitate the coordination of visits with clients through phone calls after they view the relevant information on the website. This job has allowed me to apply my web design and user experience skills to ensure navigation is intuitive and key information about heating services is clearly accessible to site visitors.",
     tecnologies: ["React", "JavaScript", "Node JS", "Firebase" , "Css"],

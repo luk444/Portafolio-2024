@@ -16,3 +16,8 @@
         @apply cursor-pointer;
     }
 }
+
+.certificates img {
+    border-radius: 10px;
+  }
+  

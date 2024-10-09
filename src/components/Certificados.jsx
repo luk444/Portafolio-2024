@@ -28,10 +28,10 @@ export default function Certificados() {
   };
 
   const skills = [
-    { title: 'JavaScript', src: JAVASCRIPT, cert: JAVASCRIPT_CERT, alt: 'JavaScript Icon' },
-    { title: 'React', src: REACT, cert: REACT_CERT, alt: 'React Icon' },
-    { title: 'DesarrolloWeb', src: CODER, cert: CODER_CERT, alt: 'CoderHouse Icon' },
-    { title: 'FrontEnd', src: TICMAS, cert: TICMAS_CERT, alt: 'Ticmas Icon' },
+    { title: 'Certificado JavaScript', src: JAVASCRIPT, cert: JAVASCRIPT_CERT, alt: 'JavaScript Icon' },
+    { title: 'Certificado React', src: REACT, cert: REACT_CERT, alt: 'React Icon' },
+    { title: 'Certificado Dev.web', src: CODER, cert: CODER_CERT, alt: 'CoderHouse Icon' },
+    { title: 'Certificado FrontEnd', src: TICMAS, cert: TICMAS_CERT, alt: 'Ticmas Icon' },
   ];
 
   return (
@@ -42,7 +42,7 @@ export default function Certificados() {
         </p>
       </div>
       <div className="col-span-2 lg:col-span-3">
-        <div className="w-full font-semibold grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 text-center py-8">
+        <div className="certificates w-full font-semibold grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 text-center py-8">
           {skills.map((skill) => (
             <div
               key={skill.title}
