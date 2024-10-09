@@ -32,7 +32,7 @@ const proyects = [
   },
   {
     title: "LadingPage: Beauty salon",
-    date: "May 2022",
+    date: "May 2023",
     description:
       "I developed the frontend of a landing page for a beauty salon, allowing clients to select a monthly plan and contact directly through WhatsApp to contract the service. I designed the page to be intuitive and attractive, making it easy to choose the desired plan. I implemented functionalities that automatically redirect to WhatsApp, ensuring quick and direct communication with the salon advisors. This project highlighted my ability to create effective interfaces that improve conversion and user experience.",
     tecnologies: ["Javascript", "React", "Tailwind"],
