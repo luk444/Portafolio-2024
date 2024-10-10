@@ -1,10 +1,11 @@
 import baxinova from "../assets/WebCalderas.png";
-import misSeries from "../assets/mis-series.png";
+import Proyect from "../assets/3dProyect.png";
 import TradeCripto from "../assets/TradeCripto.png";
 import translator from "../assets/translator.png";
 import furniture from "../assets/Forniture-Ecomerce.png";
 import Classyclub from "../assets/ClassyClub.png";
 import Autopart from "../assets/Ecomerce-Automanicaos.png";
+import idelete from "../assets/idelete.png";
 
 
 const proyects = [
@@ -31,6 +32,16 @@ const proyects = [
     rol: "FrontEnd"
   },
   {
+    "title": "E-commerce 3D Simulator",
+    "date": "Sep 2024",
+    "description": 
+      "This project is an innovative idea for e-commerce, designed to allow users to preview how products (such as armchairs or furniture) would look in their homes before purchasing them. Sellers can upload scanned 3D models of the products in compatible formats so that customers can interact with them in an immersive way. The interface is developed with React and offers support for augmented reality (AR), providing a more informed and engaging shopping experience",
+    "tecnologies": ["Javascript", "Tailwind", "AR", "ModelViewer", "React"],
+    "deploy": "https://3d-simulator.vercel.app/",
+    "repo": "https://github.com/luk444/3d-simulator",
+    "img": Proyect
+  },
+  {
     title: "LadingPage: Beauty salon",
     date: "May 2023",
     description:
@@ -40,6 +51,15 @@ const proyects = [
     repo: "https://github.com/luk444/Beauty-salon",
     img: Classyclub,
   },
+  {
+    "title": "iDeleteCloud - Simulator",
+    "date": "June 2022",
+    "description": "Web simulation for accessing lost devices, featuring Firebase-based login/registration and a real-time support chat. Includes a cryptocurrency credit loading simulation and a panel for device serial number registration, simulating server interaction to access devices.",
+    "tecnologies": ["React", "Firebase Auth", "Firestore", "Tailwind CSS", "TypeScript"],
+    "deploy": "https://i-delete.vercel.app/",
+    "repo": "https://github.com/luk444/iDelete",
+    "img": idelete
+  },  
   {
     title: "Trade-Cripto Simulator (Simulator CriptoCost)",
     date: "March 2022",
@@ -71,17 +91,8 @@ const proyects = [
     deploy: "https://traductor.netlify.app/",
     repo: "https://github.com/luk444/Traductor-ReactJS",
     img: translator,
-  },
-  {
-    title: "Mis Series Web App",
-    date: "May 2022",
-    description:
-      "Development of this user interface for a University exam, that allows the user to keep record of the series watched, and how many seasons. It was developed with HTML, CSS and just Javascript, using JQuery for DOM interactions.",
-    tecnologies: ["Javascript", "CSS", "JQuery", "Tailwind"],
-    deploy: "https://mis-series-lucv.netlify.app/",
-    repo: "https://github.com/luk444/Primer-Parcial",
-    img: misSeries,
-  },
+  }
+  
 ];
 
 export default proyects;
