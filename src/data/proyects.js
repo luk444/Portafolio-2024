@@ -99,15 +99,6 @@ const proyects = [
     img: classyclub,
   },
   {
-    "title": "iDeleteCloud - Simulator",
-    "date": "June 2022",
-    "description": "Web simulation for accessing lost devices, featuring Firebase-based login/registration and a real-time support chat. Includes a cryptocurrency credit loading simulation and a panel for device serial number registration, simulating server interaction to access devices.",
-    "tecnologies": ["React", "Firebase Auth", "Firestore", "Tailwind CSS", "TypeScript"],
-    "deploy": "https://i-delete.vercel.app/",
-    "repo": "https://github.com/luk444/iDelete",
-    "img": idelete
-  },  
-  {
     title: "Trade-Cripto Simulator (Simulator CriptoCost)",
     date: "March 2022",
     description:
